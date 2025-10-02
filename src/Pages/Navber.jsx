@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navber = () => {
     return (
@@ -26,21 +27,22 @@ const Navber = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+     <li><Link to={'/home'}>Home</Link></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>More</summary>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Intersted</a></li>
+            <li><a>Reviews</a></li>
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <li><a >About</a></li>
+      <li><a>Contact</a></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">Enroll Now</a>
   </div>
 </div>
     );
