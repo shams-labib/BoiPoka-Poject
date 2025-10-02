@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navber = () => {
     return (
-       <div className="navbar bg-base-100 shadow-sm">
+       <div className="navbar bg-base-100 shadow-sm ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,26 +23,18 @@ const Navber = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-lg border-1 border-gray-300 hover:shadow-2xl hover:bg-gray-400 hover:shadow-gray-600 hover:transition duration-1000 ">TitenForce</a>
+    <Link className="btn btn-ghost text-lg border-1 border-gray-300 hover:shadow-2xl hover:bg-gray-400 hover:shadow-gray-600 hover:transition duration-1000 ">Book Vibe</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-     <li><Link to={'/home'}>Home</Link></li>
-      <li>
-        <details>
-          <summary>More</summary>
-          <ul className="p-2">
-            <li><a>Intersted</a></li>
-            <li><a>Reviews</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a >About</a></li>
-      <li><a>Contact</a></li>
+     <li><NavLink to={'/home'} className={({isActive})=> isActive?"border-1 border-green-400 font-semibold text-green-500 pb-1": "border-2 border-transparent pb-1"}>Home</NavLink></li>
+      <li><NavLink to={'/listedBooks'} className={({isActive})=> isActive?'border-1 border-green-400 font-semibold text-green-500':""}>Listed Books</NavLink></li>
+      <li><NavLink to={'/pages'} className={({isActive})=> isActive?'border-1 border-green-400 font-semibold text-green-500 ':""}>Pages To Read</NavLink></li>
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Enroll Now</a>
+  <div className="navbar-end gap-3">
+    <a className="btn">Sign Up</a>
+    <a className="btn">Log In</a>
   </div>
 </div>
     );

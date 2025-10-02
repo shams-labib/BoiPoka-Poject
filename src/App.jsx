@@ -9,17 +9,17 @@ function App() {
 
   const location = useLocation();
 
-  const hideHero = location.pathname === '/home';
+  const HideHero = ["/home", '/listedBooks', '/pages'];
+
+  const showHero = !HideHero.includes(location.pathname);
  
 
   return (
     <>
     <Navber></Navber>
-    {!hideHero && <Hero></Hero>}
+    {showHero && <Hero></Hero>}
      <Outlet></Outlet>
     <Footer></Footer>
-    
-   
     </>
   )
 }

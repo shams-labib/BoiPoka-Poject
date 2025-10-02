@@ -2,8 +2,10 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div>
-            <h1>This is Home Page</h1>
+        <div className='container mx-auto border-1 border-red-500'>
+            <div className=''>
+                
+            </div>
         </div>
     );
 };
