@@ -14,7 +14,11 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/home',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader: async ()=>{
+          const res = await fetch('data.json');
+          return res.json();
+        }
       },
       {
         path:'/listedBooks',

@@ -12,15 +12,9 @@ const Navber = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><Link to={'/home'}>Home</Link></li>
+        <li><NavLink to={'/listedBooks'}>Listed Books</NavLink></li>
+        <li><Link to={'/pages'}>Pages Of Read</Link></li>
       </ul>
     </div>
     <Link className="btn btn-ghost text-lg border-1 border-gray-300 hover:shadow-2xl hover:bg-gray-400 hover:shadow-gray-600 hover:transition duration-1000 ">Book Vibe</Link>
