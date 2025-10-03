@@ -32,7 +32,7 @@ const Home = () => {
                    </div>
                 </div>
 
-                <Link to={`/card/${data.bookId}`}><button>See Details</button></Link>
+                <Link to={`/card/${data.bookId}`}><button className='px-5 py-2 text-black font-semibold rounded-xl cursor-pointer bg-blue-200'>See Details</button></Link>
             </div>)
            }
         </div>
