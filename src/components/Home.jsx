@@ -1,6 +1,6 @@
 import React from 'react';
 import star from '../assets/Vector.png'
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const Home = () => {
 
@@ -31,6 +31,8 @@ const Home = () => {
                      <img src={star} alt="" />
                    </div>
                 </div>
+
+                <Link to={`/card/${data.bookId}`}><button>See Details</button></Link>
             </div>)
            }
         </div>

@@ -4,6 +4,7 @@ import './App.css'
 import Footer from './Pages/Footer'
 import Hero from './Pages/Hero'
 import Navber from './Pages/Navber'
+import ShowCard from './Pages/ShowCard'
 
 function App() {
 
