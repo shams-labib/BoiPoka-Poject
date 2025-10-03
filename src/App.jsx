@@ -10,9 +10,9 @@ function App() {
 
   const location = useLocation();
 
-  const HideHero = ["/home", '/listedBooks', '/pages'];
+  const HideHero = ["/home", '/listedBooks', '/pages', '/card/:bookId'];
 
-  const showHero = !HideHero.includes(location.pathname);
+  const showHero = !(HideHero.includes(location.pathname) || location.pathname.startsWith("/card/"))
  
 
   return (

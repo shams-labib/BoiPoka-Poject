@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         loader: async ({params})=>{
            const res = await fetch('/data.json');
            const data = await res.json();
-           return data.find(item => item.bookId === Number(params.bookId));          
+           return data.find(item => item.bookId !== Number(params.bookId));          
         }
       },
       {
